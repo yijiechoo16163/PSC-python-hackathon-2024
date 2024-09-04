@@ -1,4 +1,3 @@
-#version 1.0
 from ursina import *
 from ursina.prefabs.platformer_controller_2d import PlatformerController2d
 import random
@@ -39,23 +38,25 @@ def spawn_random_platform():
 #points display
 points_display = Text(text='Points: 0', position=(-.5, .45), scale=2, color=color.black)
 
-# Track the highest platform the player has landed on
+#define highest_platform_landed_on
 highest_platform_landed_on = platforms[2]
 
-def update():
+def update():   
     global highest_platform_landed_on
     highest_platform_landed_on = platforms[-1]
-    
     # Update the player's height and points
     height = player.y
     points = int(height * 10) + 35 # Calculate points based on height (adjust multiplier as needed)
     points_display.text = f'Points: {points}'
 
-    # Check if the player has landed on a new highest platform
-    if player.intersects(highest_platform_landed_on).hit:
-        highest_platform_landed_on = max(platforms, key=lambda p: p.y)
+    highest_platform = max(platforms, key=lambda p: p.y)
+    # Check if the player is within a certain distance from the highest platform
+    if player.y > highest_platform.y + 4:
         spawn_random_platform()
 
+    # Check if the player has landed on a new highest platform - To add as a backup solution to Issue #7
+    if player.intersects(highest_platform_landed_on).hit:
+        spawn_random_platform()
 
 input_handler.bind('right arrow', 'd')
 input_handler.bind('left arrow', 'a')
