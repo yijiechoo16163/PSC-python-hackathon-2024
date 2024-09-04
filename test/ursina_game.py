@@ -38,18 +38,21 @@ def spawn_random_platform():
 #points display
 points_display = Text(text='Points: 0', position=(-.5, .45), scale=2, color=color.black)
 
+# Track the highest platform the player has landed on
+highest_platform_landed_on = platforms[2]
 
 def update():
+    global highest_platform_landed_on
     # Update the player's height and points
     height = player.y
     points = int(height * 10) + 35 # Calculate points based on height (adjust multiplier as needed)
     points_display.text = f'Points: {points}'
 
-    # Function to spawn platform
-    highest_platform = max(platforms, key=lambda p: p.y)
-    # Check if the player is within a certain distance from the highest platform
-    if player.y > highest_platform.y + 4:
+    # Check if the player has landed on a new highest platform
+    if player.intersects(highest_platform_landed_on).hit:
+        highest_platform_landed_on = max(platforms, key=lambda p: p.y)
         spawn_random_platform()
+        highest_platform_landed_on = platforms[-1]
 
 input_handler.bind('right arrow', 'd')
 input_handler.bind('left arrow', 'a')
