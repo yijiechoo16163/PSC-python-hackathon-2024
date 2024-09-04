@@ -6,7 +6,7 @@ app = Ursina()
 
 # Create the player
 player = PlatformerController2d()
-player.x=1
+player.x=5
 player.y = raycast(player.world_position, player.down).world_point[1] + .01
 camera.add_script(SmoothFollow(target=player, offset=[0,5,-30], speed=4))
 
