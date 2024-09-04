@@ -1,7 +1,6 @@
 from ursina import *
 from ursina.prefabs.platformer_controller_2d import PlatformerController2d
 import random
-import time
 
 app = Ursina()
 
@@ -19,10 +18,6 @@ def create_ground_segment(position):
 ground_segments = [create_ground_segment((i * 10, -4, 0)) for i in range(-10, 11)]
 
 # Create some platforms (low to high, accending order)
-#platform1 = Entity(model='cube', scale=(2, 1, 1), position=(0, -2, 0), color=color.gray, collider='box')
-#platform2 = Entity(model='cube', scale=(3, 1, 1), position=(4, 2, 0), color=color.gray, collider='box')
-#platform3 = Entity(model='cube', scale=(2, 1, 1), position=(-3, 4, 0), color=color.gray, collider='box')
-
 platforms = [
     Entity(model='cube', scale=(2, 1, 1), position=(0, -2, 0), color=color.gray, collider='box'),
     Entity(model='cube', scale=(3, 1, 1), position=(4, 2, 0), color=color.gray, collider='box'),
