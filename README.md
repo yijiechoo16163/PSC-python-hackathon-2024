@@ -140,17 +140,6 @@ Distributed under the WTFPL Licence. See `LICENCE` for more information.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-* []()
-* []()
-* []()
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/yijiechoo16163/PSC-python-hackathon-2024.svg?style=for-the-badge
@@ -163,7 +152,6 @@ Distributed under the WTFPL Licence. See `LICENCE` for more information.
 [issues-url]: https://github.com/yijiechoo16163/PSC-python-hackathon-2024/issues
 [license-shield]: https://img.shields.io/github/license/yijiechoo16163/PSC-python-hackathon-2024.svg?style=for-the-badge
 [license-url]: https://github.com/yijiechoo16163/PSC-python-hackathon-2024/blob/master/LICENSE.txt
-[product-screenshot]: images/screenshot.png
 [Python]: https://img.shields.io/badge/Python-1e4260?style=for-the-badge&logo=python&logoColor=white
 [Python-url]: https://python.org/
 [Anaconda]: https://img.shields.io/badge/Anaconda-43b02a?style=for-the-badge&logo=anaconda&logoColor=white
