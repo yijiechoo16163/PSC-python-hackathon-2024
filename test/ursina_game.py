@@ -24,6 +24,7 @@ platforms = [
     Entity(model='cube', scale=(2, 1, 1), position=(-3, 4, 0), color=color.gray, collider='box')
 ]
 
+# Function to spawn a random platform
 def spawn_random_platform():
     highest_platform = max(platforms, key=lambda p: p.y)
     xneg = random.randint(-5, -3)
@@ -34,11 +35,20 @@ def spawn_random_platform():
     new_platform = Entity(model='cube', scale=(random.uniform(2, 3), 1, 1), position=(new_x, new_y, 0), color=color.gray, collider='box')
     platforms.append(new_platform)
 
+
 def update():
+    global score
     highest_platform = max(platforms, key=lambda p: p.y)
     # Check if the player is within a certain distance from the highest platform
     if player.y > highest_platform.y + 4:
         spawn_random_platform()
+        score += 1
+        score_text.text = f'Score: {score}'
+
+# Initialize score
+score = 0
+score_text = Text(text=f'Score: {score}', position=(-0.85, 0.45), scale=2, color=color.white)
+
 
 input_handler.bind('right arrow', 'd')
 input_handler.bind('left arrow', 'a')
