@@ -127,8 +127,8 @@ Don't forget to give the project a star! Thanks again!
 
 ### Top contributors:
 
-<a href="https://github.com/github_username/repo_name/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=github_username/repo_name" alt="contrib.rocks image" />
+<a href="https://github.com/yijiechoo16163/PSC-python-hackathon-2024/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=yijiechoo16163/PSC-python-hackathon-2024" alt="contrib.rocks image" />
 </a>
 
 
