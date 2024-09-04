@@ -44,7 +44,6 @@
     </li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#licence">Licence</a></li>
-    <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
@@ -139,18 +138,6 @@ Don't forget to give the project a star! Thanks again!
 Distributed under the WTFPL Licence. See `LICENCE` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- CONTACT -->
-## Contact
-
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
-
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- ACKNOWLEDGMENTS -->
