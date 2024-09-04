@@ -1,4 +1,3 @@
-print("test")
 import numpy as np
 from matplotlib import pyplot as plt
 from pynput import keyboard, mouse
