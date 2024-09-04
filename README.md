@@ -56,9 +56,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+![Main Screen Shot](/img/main-screen-shot.png)
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+This project is a 2D platformer game developed using the Ursina game engine. The player controls a character that can move left, right, and jump across platforms. The objective is to climb as many platforms as possible, with the game dynamically generating new platforms as the player progresses. The game features a scoring system that tracks how many platforms the player has successfully climbed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -89,13 +89,18 @@ To get a local copy up and running follow these simple example steps.
    ```sh
    git clone https://github.com/yijiechoo16163/PSC-python-hackathon-2024
    ```
-3. Install NPM packages
+3. Create a new environment for this repo & Activate it
    ```sh
-   npm install
+   conda create -n yijiechoo16163-PSC-python-hackathon-2024 python=3.12
+   conda activate yijiechoo16163-PSC-python-hackathon-2024
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+4. Install dependencies
+   ```sh
+   pip install ursina
+   ```
+4. Run the program
+   ```sh
+   python main.py
    ```
 5. Change git remote url to avoid accidental pushes to base project
    ```sh
