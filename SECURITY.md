@@ -2,7 +2,7 @@
 
 ## Supported Versions
 
-Currently, this project is in the R&D stage, and no official versions have been released yet. Security updates will be provided once the project reaches a stable release.
+Currently, this project is in the R&D stage, and no official versions have been released yet.
 
 ## Reporting a Vulnerability
 
