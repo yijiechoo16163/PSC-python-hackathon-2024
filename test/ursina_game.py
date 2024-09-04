@@ -17,10 +17,11 @@ def create_ground_segment(position):
 # Create multiple ground segments to simulate an infinite ground
 ground_segments = [create_ground_segment((i * 10, -4, 0)) for i in range(-10, 11)]
 
-# Create some platforms
-platform1 = Entity(model='cube', scale=(3, 1, 1), position=(4, 2, 0), color=color.gray, collider='box')
-platform2 = Entity(model='cube', scale=(2, 1, 1), position=(-3, 4, 0), color=color.gray, collider='box')
-platform3 = Entity(model='cube', scale=(2, 1, 1), position=(0, -2, 0), color=color.gray, collider='box')
+# Create some platforms (low to high, accending order)
+platform1 = Entity(model='cube', scale=(2, 1, 1), position=(0, -2, 0), color=color.gray, collider='box')
+platform2 = Entity(model='cube', scale=(3, 1, 1), position=(4, 2, 0), color=color.gray, collider='box')
+platform3 = Entity(model='cube', scale=(2, 1, 1), position=(-3, 4, 0), color=color.gray, collider='box')
+
 
 input_handler.bind('right arrow', 'd')
 input_handler.bind('left arrow', 'a')
