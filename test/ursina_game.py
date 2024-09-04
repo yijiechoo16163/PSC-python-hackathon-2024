@@ -21,7 +21,7 @@ ground_segments = [create_ground_segment((i * 10, -4, 0)) for i in range(-10, 11
 platforms = [
     Entity(model='cube', scale=(2, 1, 1), position=(0, -2, 0), color=color.gray, collider='box'),
     Entity(model='cube', scale=(3, 1, 1), position=(4, 2, 0), color=color.gray, collider='box'),
-    Entity(model='cube', scale=(2, 1, 1), position=(-3, 4, 0), color=color.gray, collider='box')
+    Entity(model='cube', scale=(2, 1, 1), position=(-2, 4, 0), color=color.gray, collider='box')
 ]
 
 # Function to spawn a random platform
