@@ -1,6 +1,7 @@
 from ursina import *
 from ursina.prefabs.platformer_controller_2d import PlatformerController2d
 import random
+import time
 
 app = Ursina()
 
@@ -18,10 +19,31 @@ def create_ground_segment(position):
 ground_segments = [create_ground_segment((i * 10, -4, 0)) for i in range(-10, 11)]
 
 # Create some platforms (low to high, accending order)
-platform1 = Entity(model='cube', scale=(2, 1, 1), position=(0, -2, 0), color=color.gray, collider='box')
-platform2 = Entity(model='cube', scale=(3, 1, 1), position=(4, 2, 0), color=color.gray, collider='box')
-platform3 = Entity(model='cube', scale=(2, 1, 1), position=(-3, 4, 0), color=color.gray, collider='box')
+#platform1 = Entity(model='cube', scale=(2, 1, 1), position=(0, -2, 0), color=color.gray, collider='box')
+#platform2 = Entity(model='cube', scale=(3, 1, 1), position=(4, 2, 0), color=color.gray, collider='box')
+#platform3 = Entity(model='cube', scale=(2, 1, 1), position=(-3, 4, 0), color=color.gray, collider='box')
 
+platforms = [
+    Entity(model='cube', scale=(2, 1, 1), position=(0, -2, 0), color=color.gray, collider='box'),
+    Entity(model='cube', scale=(3, 1, 1), position=(4, 2, 0), color=color.gray, collider='box'),
+    Entity(model='cube', scale=(2, 1, 1), position=(-3, 4, 0), color=color.gray, collider='box')
+]
+
+def spawn_random_platform():
+    highest_platform = max(platforms, key=lambda p: p.y)
+    xneg = random.randint(-5, -3)
+    xpos = random.randint(3, 5)
+    new_x = highest_platform.x + random.choice([xneg, xpos])
+    new_y = highest_platform.y + random.uniform(3, 4)
+        
+    new_platform = Entity(model='cube', scale=(random.uniform(2, 3), 1, 1), position=(new_x, new_y, 0), color=color.gray, collider='box')
+    platforms.append(new_platform)
+
+def update():
+    highest_platform = max(platforms, key=lambda p: p.y)
+    # Check if the player is within a certain distance from the highest platform
+    if player.y > highest_platform.y + 4:
+        spawn_random_platform()
 
 input_handler.bind('right arrow', 'd')
 input_handler.bind('left arrow', 'a')
