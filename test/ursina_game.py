@@ -43,6 +43,8 @@ highest_platform_landed_on = platforms[2]
 
 def update():
     global highest_platform_landed_on
+    highest_platform_landed_on = platforms[-1]
+    
     # Update the player's height and points
     height = player.y
     points = int(height * 10) + 35 # Calculate points based on height (adjust multiplier as needed)
@@ -52,7 +54,7 @@ def update():
     if player.intersects(highest_platform_landed_on).hit:
         highest_platform_landed_on = max(platforms, key=lambda p: p.y)
         spawn_random_platform()
-        highest_platform_landed_on = platforms[-1]
+
 
 input_handler.bind('right arrow', 'd')
 input_handler.bind('left arrow', 'a')
