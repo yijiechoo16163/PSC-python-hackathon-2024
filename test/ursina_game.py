@@ -35,20 +35,21 @@ def spawn_random_platform():
     new_platform = Entity(model='cube', scale=(random.uniform(2, 3), 1, 1), position=(new_x, new_y, 0), color=color.gray, collider='box')
     platforms.append(new_platform)
 
+#points display
+points_display = Text(text='Points: 0', position=(-.5, .45), scale=2, color=color.black)
+
 
 def update():
-    global score
+    # Update the player's height and points
+    height = player.y
+    points = int(height * 10) + 35 # Calculate points based on height (adjust multiplier as needed)
+    points_display.text = f'Points: {points}'
+
+    # Function to spawn platform
     highest_platform = max(platforms, key=lambda p: p.y)
     # Check if the player is within a certain distance from the highest platform
     if player.y > highest_platform.y + 4:
         spawn_random_platform()
-        score += 1
-        score_text.text = f'Score: {score}'
-
-# Initialize score
-score = 0
-score_text = Text(text=f'Score: {score}', position=(-0.85, 0.45), scale=2, color=color.white)
-
 
 input_handler.bind('right arrow', 'd')
 input_handler.bind('left arrow', 'a')
