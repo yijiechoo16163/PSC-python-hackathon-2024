@@ -84,7 +84,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Installation
 
-1. Install Anaconda or Miniconda for 
+1. Install Anaconda or Miniconda for limited storage device. 
 2. Clone the repo
    ```sh
    git clone https://github.com/yijiechoo16163/PSC-python-hackathon-2024
