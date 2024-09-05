@@ -36,7 +36,7 @@ def spawn_random_platform():
     platforms.append(new_platform)
 
 # Points display
-points_display = Text(text='Points: 0', position=(-.5, .45), scale=2, color=color.black)
+points_display = Text(text='Points: 0', position=(-.5, .45), scale=2, color=color.white)
 
 # Track the highest platform the player has landed on
 highest_platform_landed_on = platforms[2]
