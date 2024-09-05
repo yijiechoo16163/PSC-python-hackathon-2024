@@ -9,7 +9,7 @@ Currently, this project is in the R&D stage, and no official versions have been 
 If you discover a vulnerability, please report it using one of the following methods:
 
 - **GitHub Issues**: Open a new issue on the GitHub repository.
-- **Email**: Send a detailed report to admin [at] chooyijie [dot] com.
+- **Email**: Send a detailed report to admin@chooyijie.com.
 
 If you do not receive a response within a reasonable time (please check your spam folder), kindly open an issue on GitHub.
 
