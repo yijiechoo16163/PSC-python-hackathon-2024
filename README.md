@@ -99,11 +99,6 @@ To get a local copy up and running follow these simple example steps.
    ```sh
    python main.py
    ```
-5. Change git remote url to avoid accidental pushes to base project
-   ```sh
-   git remote set-url origin github_username/repo_name
-   git remote -v # confirm the changes
-   ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
