@@ -85,6 +85,7 @@ To get a local copy up and running follow these simple example steps.
 2. Clone the repo
    ```sh
    git clone https://github.com/yijiechoo16163/PSC-python-hackathon-2024
+   cd PSC-python-hackathon-2024
    ```
 3. Create a new environment for this repo & Activate it
    ```sh
