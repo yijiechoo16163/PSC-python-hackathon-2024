@@ -2,7 +2,11 @@
 
 ## Supported Versions
 
-Currently, this project is in the R&D stage, and no official versions have been released yet.
+| Version | Status        |
+|------|-------------|
+| v1.0    | ❌   |
+| v1.1    | ❌  |
+| v2.0   | ✅  |
 
 ## Reporting a Vulnerability
 
