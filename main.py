@@ -36,7 +36,7 @@ def spawn_random_platform():
     platforms.append(new_platform)
 
 #points display
-points_display = Text(text='Points: 0', position=(-.5, .45), scale=2, color=color.black)
+points_display = Text(text='Points: 0', position=(-.5, .45), scale=2, color=color.white)
 
 #define highest_platform_landed_on
 highest_platform_landed_on = platforms[2]
