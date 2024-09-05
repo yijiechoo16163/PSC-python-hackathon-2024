@@ -53,7 +53,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![Main Screen Shot](/img/main-screen-shot.png)
+![Main Screen Shot](/img/game.png)
 
 This project is a 2D platformer game developed using the Ursina game engine. The player controls a character that can move left, right, and jump across platforms. The objective is to climb as many platforms as possible, with the game dynamically generating new platforms as the player progresses. The game features a scoring system that tracks how many platforms the player has successfully climbed.
 
