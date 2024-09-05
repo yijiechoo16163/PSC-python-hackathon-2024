@@ -50,7 +50,7 @@ advancements = [
     {'threshold': 500, 'message': 'Congratulations! You reached 500 points!', 'color': color.yellow},
     {'threshold': 1000, 'message': 'Amazing! 1000 points achieved!', 'color': color.orange},
     {'threshold': 1500, 'message': 'Incredible! 1500 points!', 'color': color.blue},
-    {'threshold': 5000, 'message': 'You Beat The Game!!!', 'color': color.red}
+    {'threshold': 3000, 'message': 'You Beat The Game!!!', 'color': color.red}
 ]
 
 # Function to show advancement text
@@ -75,6 +75,12 @@ def update():
     # Check if the player has landed on a new highest platform
     if player.intersects(highest_platform_landed_on).hit:
         spawn_random_platform()
+
+    # Check for advancements
+    for advancement in advancements:
+        if points >= advancement['threshold'] and advancement['threshold'] not in advancements_shown:
+            show_advancement(advancement)
+            advancements_shown.append(advancement['threshold'])
 
     # Check for advancements
     for advancement in advancements:
@@ -114,5 +120,13 @@ def quit_game():
 # Create buttons
 restart_button = Button(text='Restart', color=color.azure, scale=(0.2, 0.1), position=(-0.7, 0.4), on_click=restart_game)
 quit_button = Button(text='Quit', color=color.red, scale=(0.2, 0.1), position=(0.7, 0.4), on_click=quit_game)
+
+input_handler.bind('right arrow', 'd')
+input_handler.bind('left arrow', 'a')
+input_handler.bind('up arrow', 'space')
+input_handler.bind('gamepad dpad right', 'd')
+input_handler.bind('gamepad dpad left', 'a')
+input_handler.bind('gamepad a', 'space')
+input_handler.bind('w', 'space')
 
 app.run()
