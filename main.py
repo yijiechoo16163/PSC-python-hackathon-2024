@@ -58,6 +58,35 @@ def update():
     if player.intersects(highest_platform_landed_on).hit:
         spawn_random_platform()
 
+# Restart game function
+def restart_game():
+    # Reset player position
+    player.position = (5, 0, 0)
+
+    # Reset the points
+    points_display.text = 'Points: 0'
+
+    # Reset the platforms (clear old platforms and add initial ones)
+    for platform in platforms:
+        destroy(platform)
+    platforms.clear()
+
+    platforms.append(Entity(model='cube', scale=(2, 1, 1), position=(0, -2, 0), color=color.gray, collider='box'))
+    platforms.append(Entity(model='cube', scale=(3, 1, 1), position=(4, 2, 0), color=color.gray, collider='box'))
+    platforms.append(Entity(model='cube', scale=(2, 1, 1), position=(-2, 4, 0), color=color.gray, collider='box'))
+
+    # Reset the highest platform landed on
+    global highest_platform_landed_on
+    highest_platform_landed_on = platforms[2]
+
+def quit_game():
+    print("Quit Game")
+    sys.exit()
+
+# Add buttons using Ursina's Button class
+restart_button = Button(text='Restart', color=color.azure, scale=(0.2, 0.1), position=(-0.7, 0.4), on_click=restart_game)
+quit_button = Button(text='Quit', color=color.red, scale=(0.2, 0.1), position=(0.7, 0.4), on_click=quit_game)
+
 input_handler.bind('right arrow', 'd')
 input_handler.bind('left arrow', 'a')
 input_handler.bind('up arrow', 'space')
