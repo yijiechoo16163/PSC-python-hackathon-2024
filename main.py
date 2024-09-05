@@ -35,8 +35,8 @@ def spawn_random_platform():
     new_platform = Entity(model='cube', scale=(random.uniform(2, 3), 1, 1), position=(new_x, new_y, 0), color=color.gray, collider='box')
     platforms.append(new_platform)
 
-#points display
-points_display = Text(text='Points: 0', position=(-.5, .45), scale=2, color=color.white)
+# Points display
+points_display = Text(text='Points: 0', position=(-.5, .45), scale=2, color=color.black)
 
 #define highest_platform_landed_on
 highest_platform_landed_on = platforms[2]
